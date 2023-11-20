@@ -1,0 +1,132 @@
+local M = {}
+
+M.general = {
+  n = {
+    ["<leader>w"] = { ":w<Cr>", "Save" },
+    ["<leader>q"] = { ":q<Cr>", "Save" },
+    ["<leader>qwe"] = { ":q!<Cr>", "Close ignore changes" },
+    ["ss"] = { ":vsplit<Cr>", "Split vertical" },
+    ["sh"] = { ":split<Cr>", "Split horizontal" },
+    ["sd"] = { ":close<Cr>", "Close split" },
+    ["<S-u>"] = { "<C-r>", "Redo" },
+    ["<Tab>"] = { ">>", "Indent" },
+    ["<S-Tab>"] = { "<<", "Dedent" },
+    ["<A-j>"] = { ":m .+<Cr>==", "Move line down" },
+    ["<A-k>"] = { ":m .-2<Cr>==", "Move line up" },
+    ["<A-S-j>"] = { "Vyp", "Copy line down" },
+    ["<A-S-k>"] = { "VyP", "Copy line up" },
+    ["<A-S-f>"] = { ":Format<Cr>", "LSP formatting" },
+    ["gj"] = { ":Gitsigns next_hunk <Cr>", "Git next hunk" },
+    ["gk"] = { ":Gitsigns prev_hunk <Cr>", "Git next hunk" },
+    ["cq"] = { "cb", "Change previous word" },
+  },
+
+  i = {
+    ["jk"] = { "<Esc>", "Exit insert mode" },
+    ["<A-l>"] = { "<Esc>ea", "Move to next word" },
+    ["<A-h>"] = { "<Esc>bi", "Move to previous word" },
+    ["<A-S-l>"] = { "<Esc>A", "Move to the end of a line" },
+    ["<A-S-h>"] = { "<Esc>I", "Move to the beginning of a line" },
+    ["<Tab>"] = { "<C-t>", "Indent"},
+    ["<S-Tab>"] = { "<C-d>", "Dedent"},
+    ["<A-j>"] = { "<Esc>:m .+<Cr>==gi", "Move line down" },
+    ["<A-k>"] = { "<Esc>:m .-2<Cr>==gi", "Move line up" },
+    ["<A-S-j>"] = { "<Esc>Vyp", "Copy line down" },
+    ["<A-S-k>"] = { "<Esc>VyP", "Copy line up" },
+    ["<A-BS>"] = { "<Del>", "Delete" },
+    ["<A-S-f>"] = { "<Esc>:Format<Cr>", "LSP formatting" },
+  },
+
+  v = {
+    ["jk"] = { "<Esc>", "Exit insert mode" },
+    ["<Tab>"] = { ">gv", "Indent"},
+    ["<S-Tab>"] = { "<gv", "Dedent"},
+    ["<A-j>"] = { ":m '>+1<Cr>gv=gv", "Move line down" },
+    ["<A-k>"] = { ":m '<-2<Cr>gv=gv", "Move line up" },
+    ["<A-S-j>"] = { "yp", "Copy line down" },
+    ["<A-S-k>"] = { "yP", "Copy line up" },
+  },
+
+  x = {
+    ["jk"] = { "<Esc>", "Exit insert mode" },
+  },
+
+  c = {
+    ["jk"] = { "<Esc>", "Exit insert mode" },
+  },
+
+  s = {
+      ["jk"] = { "<Esc>", "Exit insert mode" },
+  },
+
+  o = {
+    ["jk"] = { "<Esc>", "Exit insert mode" },
+  },
+}
+
+M.nvimtree = {
+  plugin = true,
+
+  n = {
+    ["<C-n>"] = { "", "" },
+    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+  },
+}
+
+M.tabufline = {
+  plugin = true,
+
+  n = {
+    ["<leader>d"] = {
+      function()
+        require("nvchad.tabufline").close_buffer()
+      end,
+      "Close buffer",
+    },
+  },
+}
+
+M.lspconfig = {
+  plugin = true,
+
+  n = {
+    ["<C-.>"] = {
+      function()
+        vim.lsp.buf.code_action()
+      end,
+      "LSP code action",
+    },
+
+    ["<C-k>"] = {
+      function()
+        vim.diagnostic.goto_prev { float = { border = "rounded" } }
+      end,
+      "Goto prev",
+    },
+
+    ["<C-j>"] = {
+      function()
+        vim.diagnostic.goto_next { float = { border = "rounded" } }
+      end,
+      "Goto next",
+    },
+  },
+}
+
+M.telescope = {
+  plugin = true,
+
+  n = {
+    [";f"] = { "<cmd> Telescope find_files <CR>", "Find files" },
+    [";/"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
+    [";b"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
+    ["<leader>."] = {
+      function()
+        vim.lsp.buf.code_action()
+      end,
+      "LSP code action",
+    },
+  },
+}
+
+return M
