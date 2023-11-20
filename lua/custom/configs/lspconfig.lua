@@ -4,16 +4,21 @@ local capabilities = config.capabilities
 
 local lspconfig = require("lspconfig")
 
-lspconfig.tsserver.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  init_options = {
-    preferences = {
-      disableSuggestions = true,
-    }
-  }
+local servers = {
+  "tsserver",
+  "prismals",
+  "eslint",
+  "dockerls",
 }
 
-lspconfig.prismals.setup {}
-lspconfig.eslint.setup {}
-lspconfig.dockerls.setup {}
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    init_options = {
+      preferences = {
+        disableSuggestions = true,
+      }
+    }
+  }
+end

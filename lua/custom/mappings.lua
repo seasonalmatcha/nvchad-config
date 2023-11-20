@@ -19,6 +19,11 @@ M.general = {
     ["gj"] = { ":Gitsigns next_hunk <Cr>", "Git next hunk" },
     ["gk"] = { ":Gitsigns prev_hunk <Cr>", "Git next hunk" },
     ["cq"] = { "cb", "Change previous word" },
+    ["<leader>t"] = {
+      function ()
+        require("nvchad.tabufline").closeAllBufs()
+      end
+    }
   },
 
   i = {
