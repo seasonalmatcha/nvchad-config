@@ -72,6 +72,10 @@ local plugins = {
       },
     },
   },
+  {
+    "ThePrimeagen/harpoon",
+    cmd = "Harpoon",
+  },
 }
 
 return plugins
