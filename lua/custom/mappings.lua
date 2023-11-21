@@ -155,12 +155,12 @@ M.telescope = {
 
 M.harpoon = {
   n = {
-    ["ha"] = {
+    ["<leader>ha"] = {
       function ()
         require("harpoon.mark").add_file()
       end
     },
-    ["hp"] = {
+    ["<leader>hp"] = {
       function ()
         require("harpoon.ui").toggle_quick_menu()
       end
