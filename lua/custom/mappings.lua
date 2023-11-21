@@ -28,7 +28,8 @@ M.general = {
       function ()
         require("nvchad.tabufline").closeAllBufs()
       end
-    }
+    },
+    ["<leader>lg"] = { ":LazyGit<Cr>", "Open LazyGit" },
   },
 
   i = {
