@@ -13,9 +13,14 @@ M.general = {
     ["<S-Tab>"] = { "<<", "Dedent" },
     ["<A-j>"] = { ":m .+<Cr>==", "Move line down" },
     ["<A-k>"] = { ":m .-2<Cr>==", "Move line up" },
+    ["∆"] = { ":m .+<Cr>==", "Move line down" },
+    ["˚"] = { ":m .-2<Cr>==", "Move line up" },
     ["<A-S-j>"] = { "Vyp", "Copy line down" },
     ["<A-S-k>"] = { "VyP", "Copy line up" },
     ["<A-S-f>"] = { ":Format<Cr>", "LSP formatting" },
+    ["Ô"] = { "Vyp", "Copy line down" },
+    [""] = { "VyP", "Copy line up" },
+    ["Ï"] = { ":Format<Cr>", "LSP formatting" },
     ["gj"] = { ":Gitsigns next_hunk <Cr>", "Git next hunk" },
     ["gk"] = { ":Gitsigns prev_hunk <Cr>", "Git next hunk" },
     ["cq"] = { "cb", "Change previous word" },
@@ -32,6 +37,10 @@ M.general = {
     ["<A-h>"] = { "<Esc>bi", "Move to previous word" },
     ["<A-S-l>"] = { "<Esc>A", "Move to the end of a line" },
     ["<A-S-h>"] = { "<Esc>I", "Move to the beginning of a line" },
+    ["¬"] = { "<Esc>ea", "Move to next word" },
+    ["˙"] = { "<Esc>bi", "Move to previous word" },
+    ["Ò"] = { "<Esc>A", "Move to the end of a line" },
+    ["Ó"] = { "<Esc>I", "Move to the beginning of a line" },
     ["<Tab>"] = { "<C-t>", "Indent"},
     ["<S-Tab>"] = { "<C-d>", "Dedent"},
     ["<A-j>"] = { "<Esc>:m .+<Cr>==gi", "Move line down" },
@@ -40,6 +49,11 @@ M.general = {
     ["<A-S-k>"] = { "<Esc>VyP", "Copy line up" },
     ["<A-BS>"] = { "<Del>", "Delete" },
     ["<A-S-f>"] = { "<Esc>:Format<Cr>", "LSP formatting" },
+    ["∆"] = { "<Esc>:m .+<Cr>==gi", "Move line down" },
+    ["˚"] = { "<Esc>:m .-2<Cr>==gi", "Move line up" },
+    ["Ô"] = { "<Esc>Vyp", "Copy line down" },
+    [""] = { "<Esc>VyP", "Copy line up" },
+    ["Ï"] = { "<Esc>:Format<Cr>", "LSP formatting" },
   },
 
   v = {
@@ -50,6 +64,10 @@ M.general = {
     ["<A-k>"] = { ":m '<-2<Cr>gv=gv", "Move line up" },
     ["<A-S-j>"] = { "yp", "Copy line down" },
     ["<A-S-k>"] = { "yP", "Copy line up" },
+    ["∆"] = { ":m '>+1<Cr>gv=gv", "Move line down" },
+    ["˚"] = { ":m '<-2<Cr>gv=gv", "Move line up" },
+    ["Ô"] = { "yp", "Copy line down" },
+    [""] = { "yP", "Copy line up" },
   },
 
   x = {
@@ -145,6 +163,58 @@ M.harpoon = {
       function ()
         require("harpoon.ui").toggle_quick_menu()
       end
+    },
+  },
+}
+
+M.nvterm = {
+  plugin = true,
+
+  t = {
+    -- toggle in terminal mode
+    ["ˆ"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Toggle floating term",
+    },
+
+    ["˙"] = {
+      function()
+        require("nvterm.terminal").toggle "horizontal"
+      end,
+      "Toggle horizontal term",
+    },
+
+    ["√"] = {
+      function()
+        require("nvterm.terminal").toggle "vertical"
+      end,
+      "Toggle vertical term",
+    },
+  },
+
+  n = {
+    -- toggle in normal mode
+    ["ˆ"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Toggle floating term",
+    },
+
+    ["˙"] = {
+      function()
+        require("nvterm.terminal").toggle "horizontal"
+      end,
+      "Toggle horizontal term",
+    },
+
+    ["√"] = {
+      function()
+        require("nvterm.terminal").toggle "vertical"
+      end,
+      "Toggle vertical term",
     },
   },
 }
