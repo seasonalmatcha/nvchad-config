@@ -76,6 +76,25 @@ local plugins = {
     "ThePrimeagen/harpoon",
     cmd = "Harpoon",
   },
+  {
+    "NvChad/nvterm",
+    opts = {
+      terminals = {
+        type_opts = {
+          float = {
+            col = 0.1,
+            row = 0.075,
+            width = 0.8,
+            height = 0.8,
+          },
+          horizontal = {
+            location = "rightbelow",
+            split_ratio = .2,
+          },
+        },
+      },
+    }
+  },
 }
 
 return plugins
