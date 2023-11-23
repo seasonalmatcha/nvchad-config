@@ -2,6 +2,7 @@ local opt = vim.opt
 local keymap = vim.keymap
 
 opt.relativenumber = true
+opt.scrolloff = 10
 
 for i = 1, 9, 1 do
   keymap.set("n", string.format("<A-%s>", i), function()
