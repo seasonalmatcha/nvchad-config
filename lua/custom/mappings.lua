@@ -30,6 +30,7 @@ M.general = {
       end
     },
     ["<leader>lg"] = { ":LazyGit<Cr>", "Open LazyGit" },
+    ["<S-x>"] = { "<C-v>", "Visual block" },
   },
 
   i = {
