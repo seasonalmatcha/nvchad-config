@@ -32,6 +32,7 @@ M.general = {
     ["<leader>lg"] = { ":LazyGit<Cr>", "Open LazyGit" },
     ["<S-x>"] = { "<C-v>", "Visual block" },
     ["<C-f>"] = { ":%s/", "Find (to replace) in buffer" },
+    ["<A-z>"] = { ":ZenMode<Cr>" },
   },
 
   i = {

@@ -113,6 +113,10 @@ local plugins = {
       vim.g.rustfmt_autosave = 1
     end
   },
+  {
+    "folke/zen-mode.nvim",
+    cmd = { "ZenMode" },
+  }
 }
 
 return plugins
