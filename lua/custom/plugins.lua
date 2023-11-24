@@ -24,6 +24,9 @@ local plugins = {
         "prisma-language-server",
         "sqlls",
         "typescript-language-server",
+        "golines",
+        "goimports_reviser",
+        "golines",
       }
     },
   },
@@ -55,6 +58,9 @@ local plugins = {
         "json",
         "prisma",
         "sql",
+        "go",
+        "gomod",
+        "gosum",
       },
       textobjects = {
         select = {
