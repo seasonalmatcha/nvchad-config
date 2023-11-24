@@ -27,6 +27,7 @@ local plugins = {
         "golines",
         "goimports_reviser",
         "golines",
+        "rust-analyzer",
       }
     },
   },
@@ -104,6 +105,13 @@ local plugins = {
   {
     "kdheepak/lazygit.nvim",
     cmd = { "LazyGit" },
+  },
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function ()
+      vim.g.rustfmt_autosave = 1
+    end
   },
 }
 
