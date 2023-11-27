@@ -154,7 +154,8 @@ M.telescope = {
       end,
       "LSP code action",
     },
-    [";rg"] = { "<cmd> Telescope live_grep <CR>", "Live grep"}
+    [";rg"] = { "<cmd> Telescope live_grep <CR>", "Live grep"},
+    [";j"] = { "<cmd> Telescope jumplist <CR>", "Jump list"},
   },
 }
 
