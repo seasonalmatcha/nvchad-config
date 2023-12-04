@@ -28,6 +28,7 @@ local plugins = {
         "goimports_reviser",
         "golines",
         "rust-analyzer",
+        "emmet-language-server",
       }
     },
   },
@@ -116,7 +117,14 @@ local plugins = {
   {
     "folke/zen-mode.nvim",
     cmd = { "ZenMode" },
-  }
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    lazy = false,
+    config = function ()
+      require('nvim-ts-autotag').setup()
+    end
+  },
 }
 
 return plugins
