@@ -1,24 +1,27 @@
 local M = {
   filetype = {
     javascript = {
-      require("formatter.filetypes.javascript").prettier
+      require("formatter.filetypes.javascript").prettier,
     },
     javascriptreact = {
-      require("formatter.filetypes.javascriptreact").prettier
+      require("formatter.filetypes.javascriptreact").prettier,
     },
     typescript = {
-      require("formatter.filetypes.typescript").prettier
+      require("formatter.filetypes.typescript").prettier,
     },
     typescriptreact = {
-      require("formatter.filetypes.typescriptreact").prettier
+      require("formatter.filetypes.typescriptreact").prettier,
     },
     go = {
       require("formatter.filetypes.go").gofumpt,
       require("formatter.filetypes.go").goimports_reviser,
       require("formatter.filetypes.go").golines,
     },
+    lua = {
+      require("formatter.filetypes.lua").stylua,
+    },
     ["*"] = {
-      require("formatter.filetypes.any").remove_trailing_whitespace
+      require("formatter.filetypes.any").remove_trailing_whitespace,
     },
   },
 }

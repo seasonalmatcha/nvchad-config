@@ -2,16 +2,16 @@ local plugins = {
   {
     "mhartington/formatter.nvim",
     event = "VeryLazy",
-    opts = function ()
+    opts = function()
       return require "custom.configs.formatter"
-    end
+    end,
   },
   {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
-    config = function ()
+    config = function()
       require "custom.configs.lint"
-    end
+    end,
   },
   {
     "williamboman/mason.nvim",
@@ -29,15 +29,16 @@ local plugins = {
         "golines",
         "rust-analyzer",
         "emmet-language-server",
-      }
+        "stylua",
+      },
     },
   },
   {
     "neovim/nvim-lspconfig",
-    config = function ()
+    config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-    end
+    end,
   },
   {
     "nvim-tree/nvim-tree.lua",
@@ -97,11 +98,11 @@ local plugins = {
           },
           horizontal = {
             location = "rightbelow",
-            split_ratio = .2,
+            split_ratio = 0.2,
           },
         },
       },
-    }
+    },
   },
   {
     "kdheepak/lazygit.nvim",
@@ -110,9 +111,9 @@ local plugins = {
   {
     "rust-lang/rust.vim",
     ft = "rust",
-    init = function ()
+    init = function()
       vim.g.rustfmt_autosave = 1
-    end
+    end,
   },
   {
     "folke/zen-mode.nvim",
@@ -121,9 +122,9 @@ local plugins = {
   {
     "windwp/nvim-ts-autotag",
     lazy = false,
-    config = function ()
-      require('nvim-ts-autotag').setup()
-    end
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
 }
 

@@ -13,11 +13,7 @@ end
 local keys = { "¡", "™", "£", "¢", "∞", "§", "¶", "•", "ª" }
 
 for i, key in ipairs(keys) do
-  keymap.set(
-    "n",
-    key,
-    function()
-      vim.api.nvim_set_current_buf(vim.t.bufs[i])
-    end
-  )
+  keymap.set("n", key, function()
+    vim.api.nvim_set_current_buf(vim.t.bufs[i])
+  end)
 end

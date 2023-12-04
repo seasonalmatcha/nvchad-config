@@ -25,9 +25,9 @@ M.general = {
     ["gk"] = { ":Gitsigns prev_hunk <Cr>", "Git next hunk" },
     ["cq"] = { "cb", "Change previous word" },
     ["<leader>t"] = {
-      function ()
+      function()
         require("nvchad.tabufline").closeAllBufs()
-      end
+      end,
     },
     ["<leader>lg"] = { ":LazyGit<Cr>", "Open LazyGit" },
     ["<S-x>"] = { "<C-v>", "Visual block" },
@@ -47,8 +47,8 @@ M.general = {
     ["˙"] = { "<Esc>bi", "Move to previous word" },
     ["Ò"] = { "<Esc>A", "Move to the end of a line" },
     ["Ó"] = { "<Esc>I", "Move to the beginning of a line" },
-    ["<Tab>"] = { "<C-t>", "Indent"},
-    ["<S-Tab>"] = { "<C-d>", "Dedent"},
+    ["<Tab>"] = { "<C-t>", "Indent" },
+    ["<S-Tab>"] = { "<C-d>", "Dedent" },
     ["<A-j>"] = { "<Esc>:m .+<Cr>==gi", "Move line down" },
     ["<A-k>"] = { "<Esc>:m .-2<Cr>==gi", "Move line up" },
     ["<A-S-j>"] = { "<Esc>Vyp", "Copy line down" },
@@ -64,8 +64,8 @@ M.general = {
 
   v = {
     ["jk"] = { "<Esc>", "Exit insert mode" },
-    ["<Tab>"] = { ">gv", "Indent"},
-    ["<S-Tab>"] = { "<gv", "Dedent"},
+    ["<Tab>"] = { ">gv", "Indent" },
+    ["<S-Tab>"] = { "<gv", "Dedent" },
     ["<A-j>"] = { ":m '>+1<Cr>gv=gv", "Move line down" },
     ["<A-k>"] = { ":m '<-2<Cr>gv=gv", "Move line up" },
     ["<A-S-j>"] = { "yp", "Copy line down" },
@@ -85,7 +85,7 @@ M.general = {
   },
 
   s = {
-      ["jk"] = { "<Esc>", "Exit insert mode" },
+    ["jk"] = { "<Esc>", "Exit insert mode" },
   },
 
   o = {
@@ -155,22 +155,22 @@ M.telescope = {
       end,
       "LSP code action",
     },
-    [";rg"] = { "<cmd> Telescope live_grep <CR>", "Live grep"},
-    [";j"] = { "<cmd> Telescope jumplist <CR>", "Jump list"},
+    [";rg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+    [";j"] = { "<cmd> Telescope jumplist <CR>", "Jump list" },
   },
 }
 
 M.harpoon = {
   n = {
     ["<leader>ha"] = {
-      function ()
+      function()
         require("harpoon.mark").add_file()
-      end
+      end,
     },
     ["<leader>hp"] = {
-      function ()
+      function()
         require("harpoon.ui").toggle_quick_menu()
-      end
+      end,
     },
   },
 }

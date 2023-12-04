@@ -1,4 +1,4 @@
-require"nvim-tressiter.configs".setup {
+require("nvim-tressiter.configs").setup {
   textobjects = {
     select = {
       enable = true,
