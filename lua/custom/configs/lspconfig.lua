@@ -12,7 +12,6 @@ local servers = {
   "dockerls",
   "tailwindcss",
   "emmet_language_server",
-  "stylua",
 }
 
 for _, lsp in ipairs(servers) do
