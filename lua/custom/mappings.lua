@@ -36,6 +36,7 @@ M.general = {
     ["<A-z>"] = { ":ZenMode<Cr>" },
     ["Ω"] = { ":ZenMode<Cr>" },
     ["<leader>jk"] = { "<cmd> noh <CR>", "Clear highlights" },
+    ["vv"] = { "ve", "Select current word" },
   },
 
   i = {
