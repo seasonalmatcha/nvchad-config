@@ -35,7 +35,6 @@ M.general = {
     ["<C-f>"] = { ":%s/", "Find (to replace) in buffer" },
     ["<A-z>"] = { ":ZenMode<Cr>" },
     ["Ω"] = { ":ZenMode<Cr>" },
-    ["<C-a>"] = { "<C-S-6>", "Alternate file" },
   },
 
   i = {
