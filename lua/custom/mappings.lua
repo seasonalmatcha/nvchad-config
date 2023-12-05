@@ -63,7 +63,6 @@ M.general = {
   },
 
   v = {
-    ["jk"] = { "<Esc>", "Exit insert mode" },
     ["<Tab>"] = { ">gv", "Indent" },
     ["<S-Tab>"] = { "<gv", "Dedent" },
     ["<A-j>"] = { ":m '>+1<Cr>gv=gv", "Move line down" },
@@ -77,7 +76,7 @@ M.general = {
   },
 
   x = {
-    ["jk"] = { "<Esc>", "Exit insert mode" },
+    ["<leader>jk"] = { "<Esc>", "Exit insert mode" },
   },
 
   c = {
