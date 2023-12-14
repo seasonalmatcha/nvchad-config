@@ -1,9 +1,9 @@
 local plugins = {
   {
-    "mhartington/formatter.nvim",
+    "stevearc/conform.nvim",
     event = "VeryLazy",
-    opts = function()
-      return require "custom.configs.formatter"
+    config = function()
+      require "custom.configs.conform"
     end,
   },
   {
@@ -18,9 +18,9 @@ local plugins = {
     opts = {
       ensure_installed = {
         "dockerfile-language-server",
-        "eslint-lsp",
+        "eslintd",
         "gopls",
-        "prettier",
+        "prettierd",
         "prisma-language-server",
         "sqlls",
         "typescript-language-server",
