@@ -7,6 +7,8 @@ conform.setup {
     typescriptreact = { { "prettierd", "prettier" } },
     javascript = { { "prettierd", "prettier" } },
     javascriptreact = { { "prettierd", "prettier" } },
+    json = { { "prettierd", "prettier" } },
+    markdown = { { "prettierd", "prettier" } },
     go = { "gofumpt", "goimports_reviser", "golines" },
     ["_"] = { "trim_whitespace" },
   },
