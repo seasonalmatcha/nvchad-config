@@ -126,6 +126,10 @@ local plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
+  {
+    "mg979/vim-visual-multi",
+    event = "VeryLazy",
+  },
 }
 
 return plugins
