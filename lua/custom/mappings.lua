@@ -37,6 +37,7 @@ M.general = {
     ["Ω"] = { ":ZenMode<Cr>" },
     ["<leader>jk"] = { "<cmd> noh <CR>", "Clear highlights" },
     ["vv"] = { "ve", "Select current word" },
+    ["<leader>s"] = { ":Navbuddy<CR>", "Open navbuddy" },
   },
 
   i = {
