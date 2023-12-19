@@ -38,6 +38,7 @@ M.general = {
     ["<leader>jk"] = { "<cmd> noh <CR>", "Clear highlights" },
     ["vv"] = { "ve", "Select current word" },
     ["<leader>s"] = { ":Navbuddy<CR>", "Open navbuddy" },
+    ["<leader>y"] = { ":TroubleToggle<CR>", "Toggle Trouble" },
   },
 
   i = {

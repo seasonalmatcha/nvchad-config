@@ -140,6 +140,11 @@ local plugins = {
     },
     opts = { lsp = { auto_attach = true } },
   },
+  {
+    "folke/trouble.nvim",
+    event = "VeryLazy",
+    cmd = { "TroubleToggle" },
+  },
 }
 
 return plugins
