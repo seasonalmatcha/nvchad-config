@@ -40,6 +40,7 @@ M.general = {
     ["<leader>s"] = { ":Navbuddy<CR>", "Open navbuddy" },
     ["<leader>y"] = { ":TroubleToggle<CR>", "Toggle Trouble" },
     ["<leader>lr"] = { ":LspRestart<CR>", "Restart LSP" },
+    ["<leader>o"] = { ":Oil<CR>", "Open oil" },
   },
 
   i = {

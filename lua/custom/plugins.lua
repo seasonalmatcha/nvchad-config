@@ -145,6 +145,13 @@ local plugins = {
     event = "VeryLazy",
     cmd = { "TroubleToggle" },
   },
+  {
+    "stevearc/oil.nvim",
+    cmd = { "Oil" },
+    config = function()
+      require("oil").setup()
+    end,
+  },
 }
 
 return plugins
