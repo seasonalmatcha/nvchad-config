@@ -64,6 +64,15 @@ local plugins = {
         "go",
         "gomod",
         "gosum",
+        "lua",
+        "css",
+        "proto",
+        "make",
+        "markdown",
+        "rust",
+        "toml",
+        "xml",
+        "yaml",
       },
       textobjects = {
         select = {
