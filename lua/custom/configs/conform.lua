@@ -10,12 +10,19 @@ conform.setup {
     json = { { "prettierd", "prettier" } },
     markdown = { { "prettierd", "prettier" } },
     go = { "gofumpt", "goimports_reviser", "golines" },
+    prisma = { "prismaFmt" },
     ["_"] = { "trim_whitespace" },
   },
   format_on_save = {
     lsp_fallback = true,
     async = false,
     timeout_ms = 500,
+  },
+  formatters = {
+    prismaFmt = {
+      command = "prisma-fmt",
+      args = { "format" },
+    },
   },
 }
 
