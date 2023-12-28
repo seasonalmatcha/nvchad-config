@@ -25,11 +25,6 @@ M.general = {
     ["gk"] = { ":Gitsigns prev_hunk <Cr>", "Git next hunk" },
     ["cq"] = { "cb", "Change previous word" },
     ["dq"] = { "db", "Delete previous word" },
-    ["<leader>t"] = {
-      function()
-        require("nvchad.tabufline").closeAllBufs()
-      end,
-    },
     ["<leader>lg"] = { ":LazyGit<Cr>", "Open LazyGit" },
     ["<S-x>"] = { "<C-v>", "Visual block" },
     ["<C-f>"] = { ":%s/", "Find (to replace) in buffer" },
@@ -41,6 +36,36 @@ M.general = {
     ["<leader>y"] = { ":TroubleToggle<CR>", "Toggle Trouble" },
     ["<leader>lr"] = { ":LspRestart<CR>", "Restart LSP" },
     ["<leader>o"] = { ":Oil<CR>", "Open oil" },
+    ["<leader>tr"] = {
+      function()
+        require("neotest").run.run()
+      end,
+      "Test nearest",
+    },
+    ["<leader>tl"] = {
+      function()
+        require("neotest").run.run_last()
+      end,
+      "Run last test",
+    },
+    ["<leader>tf"] = {
+      function()
+        require("neotest").run.run(vim.fn.expand "%")
+      end,
+      "Test current file",
+    },
+    ["<leader>to"] = {
+      function()
+        require("neotest").output_panel.toggle()
+      end,
+      "Toggle test output panel",
+    },
+    ["<leader>ts"] = {
+      function()
+        require("neotest").summary.toggle()
+      end,
+      "Toggle test summary",
+    },
   },
 
   i = {
